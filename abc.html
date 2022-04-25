@@ -1,0 +1,87 @@
+<html>
+	<head>
+	
+	<style type="text/css">
+
+#calculation {
+
+	color: red;
+	border: 2px;
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 80px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-right: 10px;
+	margin-left: 10px;
+	background-color: lightblue;
+}
+table{
+	
+	color: red;
+	border: 2px;
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 80px;
+	
+}
+
+#result
+{
+	border: 2px;
+
+}
+</style>
+	</head>
+	<body onload="test()">
+		
+		<div id="calculation">
+		Loan Amount <input type="number" id="no1"><br>
+		Interest Rate <input type="number" id="no2"><br>
+		Loan Tenure  <input type="number" id="no3"><br>
+		<input type="submit" value="calculate" onclick="calculate()">
+		</div>
+		
+		<table border="3">
+			<tr>
+			<td>MEMI</td><td><span id="emivalue"></span></td>
+			</tr>
+			<tr>
+			<td>No of Months</td><td><span id="months"></span></td>
+			</tr>
+		</table>
+		
+		<div id="result">
+		Monthly EMI IS : <span id="memi"></span>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function calculate()
+		{
+			alert('hiii');
+			var n1 = document.getElementById("no1").value;
+			if(n1<0)
+			{
+				alert('enter +ve value');
+				return false;
+			}
+			alert('test1');
+			var n2 = document.getElementById("no2").value;
+			//var n2 = document.getElementById("no3").value;
+			var month=12*parseInt(n2);
+			var memi=n1/month;
+			var intr=parseInt(memi)*0.07;
+			var finalamt=parseInt(memi)+parseInt(intr);
+			document.getElementById("memi").innerHTML=finalamt;
+			document.getElementById("months").innerHTML=month;
+			document.getElementById("emivalue").innerHTML=finalamt;
+			alert(finalamt);
+			
+		}
+		function test()
+		{
+			alert('welcome...');
+		}
+		
+	</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>First page</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+</head>
+<body>
+    <form>
+        Name <input type="text" id="name"><br>
+        <input type="submit" value="click here" onclick="display()">
+    </form>
+
+    <script>
+        function display(){
+            var str=document.getElementById("name").value;
+            alert ('Welcome...'+str);
+            document.write('Hello...')//new page  also we can use html tags in write tag..
+        }
+    </script>
+</body>
+</html>

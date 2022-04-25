@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>]
+<style>
+    table{
+        border: 5px solid;
+        background-color: aqua;
+    }
+</style>
+
+<body>
+    <table>
+        <tr>
+            <td>Number1</td>
+            <td><input type="text" id="num1"></td>
+        </tr>
+        <tr>
+            <td>Number2</td>
+            <td><input type="text" id="num2"></td>
+        </tr>
+
+        <tr>
+           <td><input type="submit" id="calci" value="add" onclick="getData('add')"></td>
+        
+            <td><input type="submit" id="calci" value="sub" onclick="getData('sub')"></td>
+         </tr>
+         <tr>
+            <td><input type="submit" id="calci" value="mul" onclick="getData('mul')"></td>
+         
+            <td><input type="submit" id="calci" value="div" onclick="getData('div')"></td>
+         </tr>
+    </table>
+    <div id="result">
+
+    </div>
+</body>
+<script>
+    var ch=document.getElementById("calci").value;
+    function getData(ch){
+        var a=document.getElementById("num1").value;
+        var b=document.getElementById("num2").value;
+        
+        alert(ch)
+        if(ch=='add')
+        {
+            add(a,b)
+        }
+        if(ch=='sub')
+        {
+            sub(a,b)
+        }
+        if(ch=='mul')
+        {
+            mul(a,b)
+        }
+        if(ch=='div')
+        {
+            div(a,b)
+        }
+    }
+    function add(a,b){
+        alert("Addition..")
+        var ans=parseInt(a)+parseInt(b)
+        document.getElementById("result").innerHTML=ans
+    }
+
+    function sub(a,b){
+        alert("subtraction...")
+        var ans=parseInt(a)-parseInt(b)
+        document.getElementById("result").innerHTML=ans
+    }
+
+    function mul(a,b){
+        alert("multi")
+        var ans=parseInt(a)*parseInt(b)
+        document.getElementById("result").innerHTML=ans
+    }
+
+    function div(a,b){
+        alert("div")
+        var ans=parseInt(a)/parseInt(b)
+        document.getElementById("result").innerHTML=ans
+    }
+</script>
+</html>

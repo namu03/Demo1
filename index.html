@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <input type="number" id="num">
+    <button onclick="fibbo()">Fibbo</button>
+
+    <h1 id="text">Hello world</h1>
+    <input type="color" oninput="changeColor()" id="col">
+    <button onclick="increaseFontSize()">+</button>
+    <button onclick="decreaseFontSize()">-</button>
+    <button onclick="changeColor()">color</button>
+</body>
+<script>
+    var initialFontSize=10
+    function increaseFontSize(){
+        console.log("Triggered Increase function")
+        initialFontSize=initialFontSize+10
+        document.getElementById("text").style.fontSize=initialFontSize + "px";
+    }
+    function decreaseFontSize(){
+        console.log("Triggered Decrease function")
+        initialFontSize=initialFontSize-10
+        document.getElementById("text").style.fontSize=initialFontSize + "px";
+    }
+
+    function changeColor(){
+        console.log("Change color")
+        var color=document.getElementById("col").value
+        document.getElementById("text").style.color=color;
+    }
+</script>
+
+<script>
+    console.log("---------print statements--------")
+    console.log("Hello world",100,true,1.2);
+    console.log(100);
+    console.log(true);
+    console.log(1.2);
+    console.log("----variables in js------------")
+    var a=100
+    var b=200
+    var c=1.2
+    var d="Namrata"
+    var e=true
+
+    let ab="xyz"
+
+    const eye="namu"
+    console.log(a,b,c,d,e,ab,eye)
+
+    console.log("---------Operators in JS-----")
+    var d=100
+    var cc=200
+    var dd=a+b
+    var s=d-cc
+    var m=d*cc
+    var n=d/cc
+    console.log("Addition of ",d,cc,"is ",dd)
+    console.log("Subtraction of ",d,cc,"is ",s)
+    console.log("Multiplication of ",d,cc,"is ",m)
+    console.log("Division of ",d,cc,"is ",n)
+    console.log(dd,s,m,n)
+    console.log(true+true)
+    console.log(typeof[])
+    console.log([1,2]+[,2,4])
+
+    console.log("-------------Conditional statements in JS------")
+    if(a>100){
+        console.log("a is greater than 100")
+    }
+
+    else if(a==100){
+        console.log("a equal to 100")
+    }
+    else{
+        console.log("a is less than 100")
+    }
+
+    console.log("----------------Loops in JS-------")
+    for(var i=0;i<=10;i++){
+        console.log(i)
+    }
+
+    console.log("--------While loop----")
+    var i=0
+    while(i<10)
+    {
+        console.log(i)
+        i=i+1
+    }
+
+    console.log("---------Fibonacci Series-----")
+    function fibbo(){
+        var no=parseInt(document.getElementById("num").value);
+        var i=0;
+        var j=1;
+        console.log(i)
+        console.log(j)
+        var k;
+        for(var a=0;a<=no;a++)
+        {
+            k=i+j;
+            console.log(k)
+            i=j;
+            j=k;
+        }
+
+    }
+
+    
+
+    
+    
+
+    
+    
+</script>
+</html>

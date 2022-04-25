@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='emi.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1 class="title">EMI CALCULATOR</h1><br><br>
+    <form class="main">
+        Loan Amount &nbsp&nbsp&nbsp&nbsp <input type="text" id="no1"><br><br>
+        Interest Rate &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" id="no2"><br><br>
+        Tenure in Months  <input type="text" id="no3"><br><br>
+        <input type="submit" onclick="calculate()">Calculate</button>
+
+        <h4 id="emi">LOAN EMI : </h4>
+        <h4 id="interest">TOTAL INTEREST PAYABLE : </h4>
+        <h4 id="total_amt">TOTAL PAYEMENT : </h4>
+
+        
+    </form>
+</body>
+<script>
+    function calculate()
+    {
+        var p=parseInt(document.getElementById("no1").value);
+        var r=parseFloat(document.getElementById("no2").value);
+        var n=parseInt(document.getElementById("no3").value);
+        r=r/100
+        console.log(Math.pow(7, 3));
+        var x=Math.pow((1+r), n)
+        var y=x-1
+        var a=p*r*x/y
+        return a
+    }
+    document.getElementById("emi").innerHTML=calculate()
+</script>
+</html>
